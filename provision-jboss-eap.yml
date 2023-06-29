@@ -5,7 +5,7 @@
   tasks:
   - name: download sources jboss-
     unarchive:
-      src: "https://developers.redhat.com/content-gateway/file/jboss-eap-7.4.0.zip"
+      src: "https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=99481"
       dest: "/tmp/"
       mode: 0755
       remote_src: yes
