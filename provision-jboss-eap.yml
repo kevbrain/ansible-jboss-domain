@@ -5,7 +5,7 @@
   tasks:
   - name: download sources jboss-
     get_url:
-      url: "https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=99481"
+      url: "https://access.redhat.com/cspdownload/8e189a1338834573bf5db628c2dfaa2e/649d96fe/JBEAP-7.4.0/jboss-eap-7.4.0.zip"
       dest: "/tmp/jboss-eap-7.4.0.zip"
   become: true
 
