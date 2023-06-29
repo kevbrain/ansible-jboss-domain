@@ -6,7 +6,7 @@
   - name: download sources jboss-
     get_url:
       url: "https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=99481"
-      dest: "/tmp/jboss-eap-7.4.0"
+      dest: "/tmp/jboss-eap-7.4.0.zip"
   become: true
 
   
