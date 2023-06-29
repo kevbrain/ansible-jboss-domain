@@ -1,3 +1,8 @@
 ---
-- name: upgrade all packages
-  yum: name=* state=latest
+- name: ensure wget is installed
+  hosts: all
+  yum:
+    name: java-1.8.0
+    state: present
+    update_cache: true
+  become: true
