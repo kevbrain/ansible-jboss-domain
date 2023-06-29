@@ -1,8 +1,8 @@
 ---
-- name: ensure wget is installed
+- name: ensure java is installed
   hosts: all
   yum:
-    name: java-1.8.0
+    name: java-1.8.0-openjdk-dlevel
     state: present
     update_cache: true
   become: true
