@@ -3,6 +3,16 @@
 - name: provsision-jdk
   hosts: all
   tasks:
+  - name: zip installed
+    yum:
+      name: zip
+      state: present
+      update_cache: true
+  - name: unzip installed
+    yum:
+      name: unzip
+      state: present
+      update_cache: true
   - name: openjdk-1.8 installed
     yum:
       name: java-1.8.0-openjdk-devel
