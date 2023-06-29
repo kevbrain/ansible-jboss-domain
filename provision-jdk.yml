@@ -5,7 +5,7 @@
   tasks:
   - name: openjdk-1.8 installed
     yum:
-      name: java-1.8.0-openjdk-dlevel
+      name: java-1.8.0-openjdk-devel
       state: present
       update_cache: true
   become: true
