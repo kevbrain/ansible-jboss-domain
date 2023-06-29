@@ -1,4 +1,5 @@
 ---
+
 - name: ensure java is installed
   hosts: all
   yum:
