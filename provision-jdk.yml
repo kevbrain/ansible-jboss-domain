@@ -1,9 +1,11 @@
 ---
 
-- name: ensure java is installed
+- name: provsision-jdk
   hosts: all
-  yum:
-    name: java-1.8.0-openjdk-dlevel
-    state: present
-    update_cache: true
+  tasks:
+  - name: openjdk-1.8 installed
+    yum:
+      name: java-1.8.0-openjdk-dlevel
+      state: present
+      update_cache: true
   become: true
