@@ -18,4 +18,10 @@
       name: java-1.8.0-openjdk-devel
       state: present
       update_cache: true
+  - name: Set JAVA_HOME
+    lineinfile:
+      dest: /etc/environment
+      state: present
+      regexp: '^JAVA_HOME'
+      line: 'JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk'
   become: true
