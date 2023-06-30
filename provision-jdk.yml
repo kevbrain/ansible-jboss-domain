@@ -1,0 +1,27 @@
+---
+
+- name: provsision-jdk
+  hosts: servers
+  tasks:
+  - name: zip installed
+    yum:
+      name: zip
+      state: present
+      update_cache: true
+  - name: unzip installed
+    yum:
+      name: unzip
+      state: present*ANSIBL
+      update_cache: true
+  - name: openjdk-1.8 installed
+    yum:
+      name: java-1.8.0-openjdk-devel
+      state: present
+      update_cache: true
+  - name: Set JAVA_HOME
+    lineinfile:
+      dest: /etc/environment
+      state: present
+      regexp: '^JAVA_HOME'
+      line: 'JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk'
+  become: true

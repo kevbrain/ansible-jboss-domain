@@ -9,6 +9,9 @@ ans-lab-3.ocp-lab.its4u.eu
 jboss-domaincontroller
 jboss-hostcontroller
 
+[jboss-allservers:vars]
+jboss_version=7.4.0
+
 [amq-servers]
 
 [servers:children]

@@ -1,0 +1,24 @@
+---
+
+- name: provsision-jboss-eap
+  hosts: jboss-allservers
+  tasks:
+  - name: Check if zip source file for jboss {{ jboss_version }} exists
+    stat:
+      path: "/tmp/jboss-eap-{{ jboss_version }}.zip"
+    register: jboss_ressource
+
+  - name: download sources jboss {{ jboss_version }}
+    get_url:
+      url: "https://access.redhat.com/cspdownload/8e189a1338834573bf5db628c2dfaa2e/649d96fe/JBEAP-7.4.0/{{ jboss_version }}.zip"
+      dest: "/tmp/{{ jboss_version }}.zip"
+    when: not jboss_ressource.stat.exists
+
+  - name: copy 
+    ansible.builtin.template:
+      src: test.xml
+      dest: /tmp/
+      
+  become: true
+
+  
