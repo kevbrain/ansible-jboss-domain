@@ -1,21 +1,21 @@
 ---
 
-- name: provsision-jdk
+- name: provision-java-jdk
   hosts: servers
   tasks:
-  - name: zip installed
+  - name: check if zip is installed
     yum:
       name: zip
       state: present
       update_cache: true
-  - name: unzip installed
+  - name: check if unzip is installed
     yum:
       name: unzip
       state: present*ANSIBL
       update_cache: true
-  - name: openjdk-1.8 installed
+  - name: check if java {{ jdk_version }} is installed
     yum:
-      name: java-1.8.0-openjdk-devel
+      name: {{ jdk_version}}-devel
       state: present
       update_cache: true
   - name: Set JAVA_HOME
@@ -23,5 +23,5 @@
       dest: /etc/environment
       state: present
       regexp: '^JAVA_HOME'
-      line: 'JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk'
+      line: 'JAVA_HOME=/usr/lib/jvm/{{ jdk_version}}'
   become: true

@@ -11,6 +11,7 @@ jboss-hostcontroller
 
 [jboss-allservers:vars]
 jboss_version=7.4.0
+jdk_version=java-1.8.0-openjdk
 
 [amq-servers]
 
