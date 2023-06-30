@@ -2,6 +2,7 @@
 
 - name: provsision-jboss-eap-7.4
   hosts: jboss-allservers
+
   tasks:
   - name: Check if zip source file exists
     stat:
