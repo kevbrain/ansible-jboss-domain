@@ -5,6 +5,6 @@ ans-lab-1.ocp-lab.its4u.eu
 ans-lab-2.ocp-lab.its4u.eu
 ans-lab-3.ocp-lab.its4u.eu
 
-[jboss-servers:children]
+[servers:children]
 jboss-domaincontroller
 jboss-hostcontroller
