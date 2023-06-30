@@ -1,6 +1,10 @@
-[domaincontroller]
+[jboss-domaincontroller]
 ans-lab-1.ocp-lab.its4u.eu
 
-[hostcontroller]
+[jboss-hostcontroller]
 ans-lab-2.ocp-lab.its4u.eu
 ans-lab-3.ocp-lab.its4u.eu
+
+[jboss-servers]
+jboss-domaincontroller
+jboss-hostcontroller
