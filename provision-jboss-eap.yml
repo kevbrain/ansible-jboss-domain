@@ -14,9 +14,9 @@
       dest: "/tmp/jboss-eap-7.4.0.zip"
     when: not register_name.stat.exists
 
-  - name: copy configuration
-    ansible.builtin.copy:
-      src: /tmp/artifacts/test.xml
+  - name: copy 
+    ansible.builtin.template:
+      src: test.xml
       dest: /tmp/
       
   become: true
