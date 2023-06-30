@@ -16,7 +16,7 @@
 
   - name: copy configuration
     ansible.builtin.copy:
-      src: /artifacts/test.xml
+      src: /tmp/artifacts/test.xml
       dest: /tmp/
       
   become: true
